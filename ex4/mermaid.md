@@ -2,9 +2,15 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/NEW_notes
     activate server
-    server-->>browser: HTML document
+    server-->>browser: 302 REDIRECT URL
+    deactivate server
+
+    Note right of browser: Server returns a 302 redirect url that restarts the flow of loading notes, css file, js file etc with the newly added note from the post request. 
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exmapleapp/notes
+    server->>browser: HTML Document
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
