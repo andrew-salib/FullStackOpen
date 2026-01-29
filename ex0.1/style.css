@@ -1,0 +1,32 @@
+h1 {
+    font-family: 'rubik storm'
+}
+
+#full-stack {
+    font-weight: bold;
+    font-family: 'rubik storm';
+}
+
+.img {
+    display: block;
+}
+
+body {
+    display: flex;
+}
+
+li{
+    font-size: 25px;
+}
+
+.linkedin {
+    margin-left: 50px;
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+.contactForm{
+    text-align: center;
+    border: 2px solid black;
+    padding: 3px;
+}
